@@ -1,0 +1,15 @@
+import re
+
+# 找出以下字符串中的数字
+
+content = 'one1two12Three33four4444five5six698'
+
+# 使用编译的对象
+p = re.compile(r'[a-z]+', re.I)
+rest = p.findall(content)
+print(rest)
+
+# 不编译
+
+all_rest = re.findall(r'[a-z]+', content, re.I)
+print(all_rest)
